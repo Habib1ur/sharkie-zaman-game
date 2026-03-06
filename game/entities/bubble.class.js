@@ -94,7 +94,13 @@ export default class Pufferfish extends MovableObject {
                 this.selfDestruct();
             };
             /**kill jellyfish */
-            if (object.name == 'jellyfish' && object.type == 'regular' && !object.isDead) {
+            if (object.name == 'jellyfish' && !object.isDead) {
+                if (object.type == 'regular' || this.poisonBubble) {
+                    object.die();
+                }
+            };
+            /**kill pufferfish with poison bubble */
+            if (object.name == 'pufferfish' && this.poisonBubble && !object.isDeath) {
                 object.die();
             };
             /**hurt boss */

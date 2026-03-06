@@ -121,6 +121,20 @@ canvas {
     bottom: -7px
 }
 
+#mod-button {
+    height: 60px;
+    width: 250px;
+    font-size: 28px;
+    background-color: #3798C5;
+    box-shadow: 0px 7px #2a7395;
+    text-shadow: 0px 2px 2px #2a7395;
+}
+
+#mod-button:hover {
+    box-shadow: none;
+    bottom: -7px
+}
+
 @keyframes breathing {
     0% {
       transform: scale(1);

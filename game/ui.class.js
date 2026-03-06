@@ -49,6 +49,10 @@ export default class UI {
             /**show tutorial */
             this.openControls();
 
+            if (this.game.isMod) {
+                this.unlockPoisonBubbles();
+            }
+
             gsap.to(document.getElementById('opening-screen'), { opacity: 0, duration: .4 })
             setTimeout(() => {
                 document.getElementById('opening-screen').classList.add('hide');

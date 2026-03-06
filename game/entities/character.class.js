@@ -168,6 +168,7 @@ export default class Character extends MovableObject {
 
   /**take dmg */
   takeDmg(amount, type) {
+    if (this.game.isMod) return;
     /**die if health <= 0 */
     if (this.health - amount <= 0) {
       this.die();

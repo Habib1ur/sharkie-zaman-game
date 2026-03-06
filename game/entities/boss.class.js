@@ -177,7 +177,7 @@ export default class Boss extends MovableObject {
       this.makeInvincible();
 
       /**update health */
-      this.health -= 20;
+      this.health -= this.game.isMod ? 30 : 20;
       this.game.ui.updateBossHealthbar();
       this.checkForDeath();
 
@@ -193,9 +193,9 @@ export default class Boss extends MovableObject {
     }, 600);
   }
 
-  /**setup death when health == 0 */
+  /**setup death when health <= 0 */
   checkForDeath() {
-    if (this.health == 0) {
+    if (this.health <= 0) {
       this.die();
     }
   }

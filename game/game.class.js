@@ -6,6 +6,7 @@ import Sounds from "./utils/sounds.class.js";
 
 export default class Game {
   static instance;
+  isMod = false;
 
   constructor(canvas) {
     /**Singleton */

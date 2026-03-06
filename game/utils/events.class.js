@@ -41,6 +41,13 @@ export default class Events extends EventEmitter {
         
         /**play button on start screen */
         document.getElementById('play-button').addEventListener('click', () => {
+            this.game.isMod = false;
+            this.game.ui.playClick();
+        });
+
+        /**mod button on start screen */
+        document.getElementById('mod-button').addEventListener('click', () => {
+            this.game.isMod = true;
             this.game.ui.playClick();
         });
 
